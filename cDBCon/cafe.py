@@ -14,7 +14,7 @@ def add(item):
     this_price = price.get(item)
     sum += this_price
     order.append(item)
-    textarea.insert(tk.INSERT, item+" ")
+    textarea.insert(tk.INSERT, item+" \n")
     label1['text'] = "금액: " + str(sum) + "원"
 
 def btn_exit():
@@ -32,6 +32,7 @@ frame1.pack()
 
 # 프레임 안에 버튼 들 배열
 tk.Button(frame1, text='coffee', command=lambda: add('coffee'), width=10, height=2).grid(row=0, column=0)
+
 tk.Button(frame1, text='latte', command=lambda: add('latte'), width=10, height=2).grid(row=1, column=0)
 tk.Button(frame1, text='smoothie', command=lambda: add('smoothie'), width=10, height=2).grid(row=2, column=0)
 tk.Button(frame1, text='tea', command=lambda: add('tea'), width=10, height=2).grid(row=3, column=0)
